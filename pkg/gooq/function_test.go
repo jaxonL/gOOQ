@@ -23,6 +23,10 @@ var functionTestCases = []TestCase{
 		Constructed:  Least(String("a"), String("b")),
 		ExpectedStmt: "LEAST($1, $2)",
 	},
+	{
+		Constructed:  Select(Greatest(Int64(1), Int64(2), Int64(3))),
+		ExpectedStmt: "SELECT GREATEST($1, $2, $3)",
+	},
 }
 
 func TestFunctions(t *testing.T) {
